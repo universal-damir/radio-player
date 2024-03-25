@@ -21,8 +21,8 @@ class RadioPlayer extends React.Component {
   render() {
     return (
       <div className="radio-player" style={{ backgroundImage: `url(${backgroundImage})` }}>
-        <h1 className="radio-title">Palm Radio</h1>
-        <p className="radio-version">test version 1.01</p> {/* Additional text */}
+        <h1 className="radio-title">Talas Radio</h1>
+        <p className="radio-version">test version 1.01 from Gigi's village</p> {/* Additional text */}
         <button className="play-button" onClick={this.togglePlay}>
           {/* Toggle between play and pause button images */}
           <img src={this.state.isPlaying ? pauseButtonImg : playButtonImg} alt={this.state.isPlaying ? 'Pause' : 'Play'} />
