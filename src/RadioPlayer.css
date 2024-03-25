@@ -1,0 +1,39 @@
+/* src/RadioPlayer.css */
+.radio-player {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .radio-title {
+    font-size: 3em;
+    color: white;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .radio-version {
+    font-size: 1em; /* Smaller than the title */
+    color: white;
+    font-weight: normal;
+    font-family: 'Arial', sans-serif;
+    margin: 10px 0; /* Add some spacing between the title and the version text */
+  }
+  
+  .play-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .play-button img {
+    width: 100px;
+    height: 100px;
+  }
+  
