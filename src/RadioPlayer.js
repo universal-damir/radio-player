@@ -1,8 +1,8 @@
 import React from 'react';
 import './RadioPlayer.css';
 import backgroundImage from './background-2.webp';
-import playButtonImg from './play-button-1.png';
-import pauseButtonImg from './pause-button-1.png';
+import playButtonImg from './play-button-2.png';
+import pauseButtonImg from './pause-button-2.png';
 
 class RadioPlayer extends React.Component {
   audio = new Audio("https://s2.radio.co/s83482c97d/listen");
