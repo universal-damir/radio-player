@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('./background.png'); /* Replace with the correct path to your image */
+  background-image: url('./background-2.webp'); /* Replace with the correct path to your image */
   background-size: cover; /* Ensure the background covers the full area */
   background-repeat: no-repeat; /* Do not repeat the background */
   background-position: center center; /* Center the background image */
