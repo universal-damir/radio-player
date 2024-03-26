@@ -1,7 +1,7 @@
 // src/RadioPlayer.js
 import React from 'react';
 import './RadioPlayer.css';
-import backgroundImage from './background.png';
+import backgroundImage from './background-2.webp';
 import playButtonImg from './play-button-1.png'; // Make sure this is the correct path
 import pauseButtonImg from './pause-button-1.png'; // Add a pause button image and make sure this is the correct path
 
