@@ -27,6 +27,8 @@ class RadioPlayer extends React.Component {
           {/* Toggle between play and pause button images */}
           <img src={this.state.isPlaying ? pauseButtonImg : playButtonImg} alt={this.state.isPlaying ? 'Pause' : 'Play'} />
         </button>
+        <div className="photo-credit">Backround: Hiroshi Nagai</div> {/* Add your photo credit text here */}
+
       </div>
     );
   }
