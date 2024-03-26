@@ -14,7 +14,7 @@
 }
 
 .radio-title {
-  font-size: 4vw; /* Use vw for responsive font size */
+  font-size: 3vw; /* Use vw for responsive font size */
   color: white;
   font-weight: bold;
   font-family: 'Futura', sans-serif;
@@ -23,7 +23,7 @@
 }
 
 .radio-version {
-  font-size: 1.5vw; /* Use vw for responsive font size */
+  font-size: 1vw; /* Use vw for responsive font size */
   color: white;
   font-weight: normal;
   font-family: 'Arial', sans-serif;
