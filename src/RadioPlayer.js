@@ -1,4 +1,3 @@
-// src/RadioPlayer.js
 import React from 'react';
 import './RadioPlayer.css';
 import backgroundImage from './background-2.webp';
@@ -22,13 +21,15 @@ class RadioPlayer extends React.Component {
     return (
       <div className="radio-player" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <h1 className="radio-title">Talas Radio</h1>
-        <p className="radio-version">test version 1.02, live from gigi's village</p> {/* Additional text */}
+        <p className="radio-version">playing rare soul and disco for friends and music lovers</p>
         <button className="play-button" onClick={this.togglePlay}>
-          {/* Toggle between play and pause button images */}
           <img src={this.state.isPlaying ? pauseButtonImg : playButtonImg} alt={this.state.isPlaying ? 'Pause' : 'Play'} />
         </button>
-        <div className="photo-credit">Background: Hiroshi Nagai</div> {/* Add your photo credit text here */}
-
+        <div className="photo-credit">Background: Hiroshi Nagai</div>
+        {/* Here is the added description */}
+        <div className="radio-description">
+        beta 1.03, live from gigi's village
+        </div>
       </div>
     );
   }
