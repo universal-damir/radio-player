@@ -2,8 +2,8 @@
 import React from 'react';
 import './RadioPlayer.css';
 import backgroundImage from './background.jpeg';
-import playButtonImg from './play-button.png'; // Make sure this is the correct path
-import pauseButtonImg from './pause-button.png'; // Add a pause button image and make sure this is the correct path
+import playButtonImg from './play-button-1.png'; // Make sure this is the correct path
+import pauseButtonImg from './pause-button-1.png'; // Add a pause button image and make sure this is the correct path
 
 class RadioPlayer extends React.Component {
   audio = new Audio("https://s2.radio.co/s83482c97d/listen");
@@ -22,7 +22,7 @@ class RadioPlayer extends React.Component {
     return (
       <div className="radio-player" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <h1 className="radio-title">Talas Radio</h1>
-        <p className="radio-version">test version 1.01 from Gigi's village</p> {/* Additional text */}
+        <p className="radio-version">test version 1.02 from Gigi's village</p> {/* Additional text */}
         <button className="play-button" onClick={this.togglePlay}>
           {/* Toggle between play and pause button images */}
           <img src={this.state.isPlaying ? pauseButtonImg : playButtonImg} alt={this.state.isPlaying ? 'Pause' : 'Play'} />
