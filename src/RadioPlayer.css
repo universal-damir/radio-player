@@ -1,39 +1,43 @@
-/* src/RadioPlayer.css */
 .radio-player {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .radio-title {
-    font-size: 3em;
-    color: white;
-    font-weight: bold;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .radio-version {
-    font-size: 1em; /* Smaller than the title */
-    color: white;
-    font-weight: normal;
-    font-family: 'Arial', sans-serif;
-    margin: 10px 0; /* Add some spacing between the title and the version text */
-  }
-  
-  .play-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  .play-button img {
-    width: 100px;
-    height: 100px;
-  }
-  
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover; /* Ensure the background covers the full screen */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  background-position: center center; /* Center the background image */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+.radio-title {
+  font-size: 2em; /* Smaller font size for smaller screens */
+}
+
+.radio-version {
+  font-size: 0.8em; /* Adjust version text size for smaller screens */
+}
+
+.play-button img {
+  width: 80px; /* Smaller button size for smaller screens */
+  height: 80px;
+}
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+.radio-title {
+  font-size: 1.5em;
+}
+
+.radio-version {
+  font-size: 0.7em;
+}
+
+.play-button img {
+  width: 60px;
+  height: 60px;
+}
+}
