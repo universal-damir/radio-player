@@ -6,60 +6,72 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url('./background.png'); /* Adjust with correct path to your image */
   background-size: cover; /* Cover the entire page */
   background-repeat: no-repeat; /* Prevent the background from repeating */
   background-position: center center; /* Center the background image */
-  background-attachment: fixed; /* Keep the background fixed during scrolling */
+  background-attachment: fixed; /* Optional: Fixed background */
 }
 
 .radio-title {
-  font-size: calc(2em + 1vw); /* Responsive font size */
+  font-size: 3em; /* Responsive font size using vw unit */
   color: white;
   font-weight: bold;
   font-family: 'Futura', sans-serif;
+  text-align: center; /* Center text */
   margin: 0;
   padding: 0;
 }
 
 .radio-version {
-  font-size: calc(1em + 0.5vw); /* Responsive font size */
+  font-size: 1em; /* Adjust the size as needed */
   color: white;
   font-weight: normal;
   font-family: 'Arial', sans-serif;
-  margin: 10px 0;
+  text-align: center; /* Center text */
+  margin-top: 0.5em;
 }
 
 .play-button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none; /* Remove focus outline */
   margin-top: 20px;
 }
 
 .play-button img {
-  width: 10vw; /* Responsive size */
+  width: 10vw; /* Responsive width */
   height: auto; /* Maintain aspect ratio */
   max-width: 100px; /* Maximum size */
-  min-width: 50px; /* Minimum size */
 }
 
 @media (max-width: 768px) {
   .radio-title {
-      font-size: calc(1.5em + 2vw); /* Adjust for smaller screens */
+    font-size: 2.5em; /* Smaller font size for tablet */
   }
 
   .radio-version {
-      font-size: calc(0.8em + 1vw); /* Adjust for smaller screens */
+    font-size: 0.8em; /* Smaller text for tablet */
   }
 
   .play-button img {
-      width: 15vw; /* Adjust for smaller screens */
-      min-width: 40px; /* Adjust for smaller screens */
+    width: 15vw; /* Larger button for better tap targets on tablet */
+    max-width: 80px; /* Adjust max size for tablet */
   }
 }
 
 @media (max-width: 480px) {
-  .radio-title, .radio-version {
-      text-align: center; /* Ensure text is centered on very small screens */
+  .radio-title {
+    font-size: 2em; /* Smaller font size for mobile */
+  }
+
+  .radio-version {
+    font-size: 0.7em; /* Smaller text for mobile */
+  }
+
+  .play-button img {
+    width: 20vw; /* Larger button for better tap targets on mobile */
+    max-width: 60px; /* Adjust max size for mobile */
   }
 }
