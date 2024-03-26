@@ -45,4 +45,21 @@
 
 @media (max-width: 768px) {
   .radio-title {
-      font-size: calc
+      font-size: calc(1.5em + 2vw); /* Adjust for smaller screens */
+  }
+
+  .radio-version {
+      font-size: calc(0.8em + 1vw); /* Adjust for smaller screens */
+  }
+
+  .play-button img {
+      width: 15vw; /* Adjust for smaller screens */
+      min-width: 40px; /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .radio-title, .radio-version {
+      text-align: center; /* Ensure text is centered on very small screens */
+  }
+}
