@@ -41,7 +41,7 @@ class RadioPlayer extends React.Component {
 
   render() {
     const { isPlaying, isBuffering } = this.state;
-
+  
     return (
       <div className="radio-player" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <h1 className="radio-title">Talas Radio</h1>
@@ -49,8 +49,9 @@ class RadioPlayer extends React.Component {
         <button className="play-button" onClick={this.togglePlay}>
           <img src={isPlaying ? pauseButtonImg : playButtonImg} alt={isPlaying ? 'Pause' : 'Play'} />
         </button>
-        {/* Display buffering state to the user */}
-        {isBuffering && <div className="buffering-indicator">Buffering...</div>}
+        {isBuffering && (
+          <div className="loader"></div> // Here is where the loader is included instead of the "Buffering..." text
+        )}
         <div className="radio-description">beta 1.03 | live from gigi's village</div>
         <div className="photo-credit">Background: Hiroshi Nagai</div>
       </div>
