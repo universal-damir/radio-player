@@ -9,6 +9,28 @@ class RadioPlayer extends React.Component {
 
   state = {
     isPlaying: false,
+    isBuffering: false, // Add a buffering state
+  };
+
+  componentDidMount() {
+    // Listen to the audio events for buffering
+    this.audio.addEventListener('playing', this.handleAudioPlay);
+    this.audio.addEventListener('waiting', this.handleAudioWaiting);
+  }
+
+  componentWillUnmount() {
+    // Clean up to avoid memory leaks
+    this.audio.removeEventListener('playing', this.handleAudioPlay);
+    this.audio.removeEventListener('waiting', this.handleAudioWaiting);
+    this.audio.pause();
+  }
+
+  handleAudioPlay = () => {
+    this.setState({ isBuffering: false });
+  };
+
+  handleAudioWaiting = () => {
+    this.setState({ isBuffering: true });
   };
 
   togglePlay = () => {
@@ -18,13 +40,17 @@ class RadioPlayer extends React.Component {
   };
 
   render() {
+    const { isPlaying, isBuffering } = this.state;
+
     return (
       <div className="radio-player" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <h1 className="radio-title">Talas Radio</h1>
         <p className="radio-version">rare soul & disco for friends and music lovers</p>
         <button className="play-button" onClick={this.togglePlay}>
-          <img src={this.state.isPlaying ? pauseButtonImg : playButtonImg} alt={this.state.isPlaying ? 'Pause' : 'Play'} />
+          <img src={isPlaying ? pauseButtonImg : playButtonImg} alt={isPlaying ? 'Pause' : 'Play'} />
         </button>
+        {/* Display buffering state to the user */}
+        {isBuffering && <div className="buffering-indicator">Buffering...</div>}
         <div className="radio-description">beta 1.03 | live from gigi's village</div>
         <div className="photo-credit">Background: Hiroshi Nagai</div>
       </div>
